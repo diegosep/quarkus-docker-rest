@@ -1,0 +1,13 @@
+quarkus:
+  datasource:
+    db-kind: h2
+    jdbc:
+      max-size: 13
+      min-size: 3
+      url: jdbc:h2:mem:default;DB_CLOSE_DELAY=-1
+    username: admin
+    password: 1234
+  hibernate-orm:
+    sql-load-script: database-plants.sql
+    database:
+      generation: update

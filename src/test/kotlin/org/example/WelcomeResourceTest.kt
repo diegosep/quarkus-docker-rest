@@ -6,15 +6,15 @@ import org.hamcrest.CoreMatchers.`is`
 import org.junit.jupiter.api.Test
 
 @QuarkusTest
-class ExampleResourceTest {
+class WelcomeResourceTest {
 
     @Test
     fun testHelloEndpoint() {
         given()
-          .`when`().get("/hello")
+          .`when`().get("/")
           .then()
              .statusCode(200)
-             .body(`is`("hello"))
+             .body(`is`("{\"message\":\"Hello From Quarkus\"}"))
     }
 
 }
