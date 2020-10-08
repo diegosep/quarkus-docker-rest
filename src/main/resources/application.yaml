@@ -1,3 +1,4 @@
+
 quarkus:
   datasource:
     db-kind: h2
@@ -11,3 +12,18 @@ quarkus:
     sql-load-script: database-plants.sql
     database:
       generation: update
+"%cloud":
+  quarkus:
+    datasource:
+      db-kind: postgres
+      jdbc:
+        max-size: 13
+        min-size: 3
+        url: ${DATABASE_URL}
+      username: ${DATABASE_USERNAME}
+      password: ${DATABASE_PASSWORD}
+    hibernate-orm:
+      sql-load-script: database-plants.sql
+      database:
+        generation: update
+

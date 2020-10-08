@@ -17,6 +17,11 @@ docker build -f src/main/docker/Dockerfile -t quarkus/quarkus-docker-rest .
 docker run -i -p 8080:8080 quarkus/quarkus-docker-rest
 ```
 
+### Run it with cloud profile
+´´´
+docker run --env DATABASE_USERNAME=my_username --env DATABASE_PASSWORD=my_password  --env DATABASE_URL=jdbc:postgresql://localhost:5432/some-database  --env QUARKUS_PROFILE=aws -i -p 8080:8080 quarkus/quarkus-docker-rest
+´´´
+
 ## Endpoints
 
 ### Get all Plants
@@ -35,3 +40,4 @@ POST /plant
     "type": "Arbol"
 }
 ```
+
