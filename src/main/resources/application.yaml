@@ -15,7 +15,7 @@ quarkus:
 "%dev":
   quarkus:
     datasource:
-      db-kind: postgres
+      db-kind: postgresql
       jdbc:
         max-size: 13
         min-size: 3
