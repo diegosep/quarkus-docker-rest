@@ -12,7 +12,7 @@ quarkus:
     sql-load-script: database-plants.sql
     database:
       generation: update
-"%cloud":
+"%dev":
   quarkus:
     datasource:
       db-kind: postgres
